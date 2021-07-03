@@ -12,11 +12,18 @@ body {
 
 /* apply styles to <header> */
 header {
+    background-image: url("../images/run-buddy-hero-bg.jpeg");
+    background-size: cover;
+    background-position: 80%;
+    background-attachment: fixed;
     padding: 20px 35px;
     background-color: #39a6b2;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 }
 
 header h1 {
@@ -24,6 +31,7 @@ header h1 {
     font-size: 36px;
     color: #fce138;
     margin: 0;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
  }
   
 header a {
@@ -48,6 +56,14 @@ header nav ul li a {
     font-weight: lighter;
     font-size: 1.5vw;
     padding: 10px 15px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+header nav ul li a:hover {
+    background: #fce138;
+    color: #024e76;
+    border-radius: 15px;
+    text-shadow: none;
 }
 
 /* apply styles to <footer> */
@@ -84,8 +100,8 @@ section {
 .hero {
     background-image: url("../images/run-buddy-hero-bg.jpeg");
     background-size: cover;
-    background-position: center;
-    position: relative;
+    background-position: 80%;
+    background-attachment: fixed;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -105,15 +121,18 @@ section {
     font-style: italic;
     font-size: 55px;
     color: #fce138;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .hero-form {
     border: 3px solid #024e76;
-    background-color: #fce138;
+    border-radius: 15px;
+    background-color: rgba(252, 225, 56, 0.8);
     padding: 20px;
     width: 40%;
     margin: 3.5%;
     color: #024e76;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .hero-form h3 {
@@ -133,19 +152,32 @@ section {
     color: #fce138;
     background-color: #024e76;
     border: none;
+    border-radius: 10px;
     padding: 10px 20px;
     font-size: 16px;
 }
 
+.hero-form button:hover {
+    background-color: #39a6b2;  
+}
+
 .hero-form .form-input {
     border: 1px solid #024e76;
+    border-radius: 10px;
     display: block;
     padding: 7px 15px;
     font-size: 16px;
+    background-color: rgba(255,255,255, 0.75);
     color: #024e76;
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 15px; 
 }
+
+.hero-form .form-input:focus {
+    background-color: rgba(255,255,255, 1);
+    outline: none;
+}
+
 /* Hero Style End */
 
 .section-title {
@@ -196,6 +228,10 @@ section {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+}
+
+.step:last-child {
+    border-bottom: none;
 }
 
 .step-info {
@@ -319,18 +355,26 @@ section {
 
 .contact-form input, .contact-form textarea {
     border: 1px solid #024e76;
+    border-radius: 10px;
     display: block;
     padding: 7px 15px;
     font-size: 16px;
     color: #024e76;
+    background-color: rgba(255,255,255, 0.75);
     width: 100%;
     margin-bottom: 15px;
     margin-top: 5px;
 }
 
+.contact-form input:focus, .contact-form textarea:focus {
+    background-color: rgba(255, 255, 255, 1.0);
+    outline: none;
+}
+
 .contact-form button {
     width: 100%;
     border: none;
+    border-radius: 10px;
     background: #fce138;
     color: #024e76;
     text-align: center;
@@ -338,6 +382,10 @@ section {
     font-size: 16px;
 }
 
+.contact-form button:hover {
+    color: #fce138;
+    background: #39a6b2;
+}
   
 /* REACH OUT STYLES END */
 
@@ -360,6 +408,7 @@ section {
     header {
         padding-bottom: 0;
         justify-content: center;
+        position: relative;
     }
 
     header h1 {
